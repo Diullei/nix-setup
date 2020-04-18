@@ -13,6 +13,7 @@
     curl
     which
     xscreensaver
+    terminator
   ]);
 
   time.timeZone = "Europe/Oslo";
@@ -34,6 +35,44 @@
   networking.interfaces.wlp2s0.useDHCP = true;
 
   networking.networkmanager.enable = true;
+
+  services = {
+    xserver = {
+      libinput.naturalScrolling = true;
+      libinput.middleEmulation = true;
+      libinput.tapping = true;
+      libinput.enable = true;
+
+      enable = true;
+      displayManager = {
+        sddm = {
+          enable = true;
+          # autoLogin = false;
+          # theme = slim-theme;
+          # defaultUser = "gomes";
+        };
+      };
+
+      # displayManager.sddm.enable = true;
+
+      desktopManager = {
+         gnome3.enable = true;
+         plasma5.enable = true;
+      };
+
+      windowManager.i3 = {
+        enable = true;
+        package = pkgs.i3-gaps;
+        extraPackages = with pkgs; [
+          dmenu
+          i3status
+          i3lock
+          # i3blocks
+          rofi
+        ];
+      };
+    };
+  };
 
   users.extraUsers.gomes = {
     createHome = true;
