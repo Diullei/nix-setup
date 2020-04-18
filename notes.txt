@@ -2,4 +2,5 @@ ref: https://qfpl.io/posts/installing-nixos/
 
 # to finish
 nixos-install
+# nixos-rebuild switch
 reboot
