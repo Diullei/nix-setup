@@ -8,7 +8,6 @@
     git
     networkmanagerapplet
     nix-prefetch-scripts
-    nix-repl
     vim
     wget
     curl
