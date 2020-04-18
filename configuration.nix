@@ -35,7 +35,7 @@
 
   networking.networkmanager.enable = true;
 
-  users.extraUsers.qfpl = {
+  users.extraUsers.gomes = {
     createHome = true;
     extraGroups = [ "wheel" "video" "audio" "disk" "networkmanager" ];
     group = "users";

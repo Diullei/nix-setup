@@ -4,3 +4,7 @@ ref: https://qfpl.io/posts/installing-nixos/
 nixos-install
 # nixos-rebuild switch
 reboot
+
+===========
+Assuming your system has booted to a login screen, you’re going to want to set your user’s password so you don’t login to your graphical environment as root. To do this, press Ctrl-Alt-F1 to open a terminal, login as root, and run passwd $USER, replacing $USER with the name of the user you configured. Once set, run reboot to reboot your machine and login as your regular user.
+===========
