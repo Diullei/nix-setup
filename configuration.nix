@@ -4,7 +4,7 @@
   imports = [ ./hardware-configuration.nix ];
 
   environment.systemPackages = (with pkgs; [
-    google-chrome
+    firefox
     git
     networkmanagerapplet
     nix-prefetch-scripts
