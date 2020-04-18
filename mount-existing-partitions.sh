@@ -4,9 +4,9 @@
 #   swap partition eg. /dev/sda1
 #   lvm partition eg. /dev/sda2
 
-cryptsetup luksOpen $1 nixos-enc
+cryptsetup luksOpen /dev/sda2 nixos-enc
 lvscan
 vgchange -ay
 
 mount /dev/nixos-vg/root /mnt
-mount $0 /mnt/boot
+mount /dev/sda1 /mnt/boot

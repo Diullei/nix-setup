@@ -2,7 +2,7 @@
 #   boot partition eg. /dev/sda1
 
 # -- Create a FAT32 filesystem on our boot partition
-mkfs.vfat -n boot $0
+mkfs.vfat -n boot /dev/sda1
 
 # -- Create an ext4 filesystem for our root partition
 mkfs.ext4 -L nixos /dev/nixos-vg/root

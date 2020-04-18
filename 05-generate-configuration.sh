@@ -3,5 +3,5 @@
 
 mount /dev/nixos-vg/root /mnt
 mkdir /mnt/boot
-mount $0 /mnt/boot
+mount /dev/sda1 /mnt/boot
 nixos-generate-config --root /mnt
