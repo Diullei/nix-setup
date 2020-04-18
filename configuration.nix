@@ -24,8 +24,10 @@
     preLVM = true;
   }];
 
-  boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
+  # boot.loader.grub.enable = true;
+  # boot.loader.grub.version = 2;
+
+  boot.loader.systemd-boot.enable = true;
 
   networking.useDHCP = false;
   networking.interfaces.enp0s31f6.useDHCP = true;
